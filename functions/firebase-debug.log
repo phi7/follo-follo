@@ -1,0 +1,978 @@
+[debug] [2022-10-04T11:02:29.798Z] ----------------------------------------------------------------------
+[debug] [2022-10-04T11:02:29.799Z] Command:       /Users/nt/.nodebrew/node/v16.14.0/bin/node /Users/nt/.nodebrew/current/bin/firebase emulators:start --only functions
+[debug] [2022-10-04T11:02:29.799Z] CLI Version:   11.13.0
+[debug] [2022-10-04T11:02:29.799Z] Platform:      darwin
+[debug] [2022-10-04T11:02:29.799Z] Node Version:  v16.14.0
+[debug] [2022-10-04T11:02:29.800Z] Time:          Tue Oct 04 2022 20:02:29 GMT+0900 (日本標準時)
+[debug] [2022-10-04T11:02:29.800Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-04T11:02:29.836Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-04T11:02:29.837Z] > authorizing via signed-in user (kumypc@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-10-04T11:02:29.847Z] [hub] writing locator at /var/folders/bj/1rdcn0y945d70f3tsylfcmm40000gn/T/hub-follo-follo.json
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage, eventarc {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage, eventarc\u001b[22m"}}
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-10-04T11:02:29.863Z] defaultcredentials: writing to file /Users/nt/.config/firebase/kumypc_gmail_com_application_default_credentials.json
+[debug] [2022-10-04T11:02:29.864Z] Setting GAC to /Users/nt/.config/firebase/kumypc_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/nt/.config/firebase/kumypc_gmail_com_application_default_credentials.json"}}
+[debug] [2022-10-04T11:02:29.866Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/follo-follo/adminSdkConfig [none]
+[debug] [2022-10-04T11:02:32.113Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/follo-follo/adminSdkConfig 200
+[debug] [2022-10-04T11:02:32.114Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/follo-follo/adminSdkConfig {"projectId":"follo-follo","storageBucket":"follo-follo.appspot.com","locationId":"asia-northeast1"}
+[debug] [2022-10-04T11:02:32.422Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-10-04T11:02:32.422Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-10-04T11:02:32.423Z] Starting Emulator UI with command {"binary":"node","args":["/Users/nt/.cache/firebase/emulators/ui-v1.9.0/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/nt/.cache/firebase/emulators/ui-v1.9.0/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-10-04T11:02:32.508Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "/Users/nt/React/follo-follo/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/nt/React/follo-follo/functions\" for Cloud Functions..."}}
+[debug] [2022-10-04T11:02:32.692Z] Validating nodejs source
+[debug] [2022-10-04T11:02:33.455Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:02:33.456Z] Building nodejs source
+[debug] [2022-10-04T11:02:33.456Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:02:33.458Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:02:33.563Z] Serving at port 9005
+
+[debug] [2022-10-04T11:02:33.592Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:02:33.596Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://localhost:5001/follo-follo/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/follo-follo/us-central1/helloWorld)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-10-04T11:02:48.577Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-10-04T11:02:48.578Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-04T11:02:48.578Z] Accepted request GET /follo-follo/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2022-10-04T11:02:48.580Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-04T11:02:48.580Z] [functions] Got req.url=/follo-follo/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/follo-follo/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2022-10-04T11:02:48.590Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2022-10-04T11:02:48.591Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2022-10-04T11:02:49.152Z] [runtime-status] [22807] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-10-04T11:02:49.152Z] [runtime-status] [22807] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-10-04T11:02:49.153Z] [runtime-status] [22807] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-10-04T11:02:49.153Z] [runtime-status] [22807] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-10-04T11:02:49.177Z] [runtime-status] [22807] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-10-04T11:02:49.177Z] [runtime-status] [22807] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-10-04T11:02:49.179Z] [runtime-status] [22807] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-10-04T11:02:49.180Z] [runtime-status] [22807] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-10-04T11:02:49.180Z] [runtime-status] [22807] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-10-04T11:02:49.180Z] [runtime-status] [22807] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-10-04T11:02:49.183Z] [runtime-status] [22807] Functions runtime initialized. {"cwd":"/Users/nt/React/follo-follo/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Functions runtime initialized. {\"cwd\":\"/Users/nt/React/follo-follo/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-10-04T11:02:49.183Z] [runtime-status] [22807] Listening to port: /var/folders/bj/1rdcn0y945d70f3tsylfcmm40000gn/T/fire_emu_fa572c4e37cef177.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [22807] Listening to port: /var/folders/bj/1rdcn0y945d70f3tsylfcmm40000gn/T/fire_emu_fa572c4e37cef177.sock"}}
+[debug] [2022-10-04T11:02:49.203Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[debug] [2022-10-04T11:02:49.204Z] [worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: BUSY"}}
+[info] i  functions: Beginning execution of "helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"helloWorld\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2022-10-04T11:02:49.206Z] [worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: IDLE"}}
+[debug] [2022-10-04T11:02:49.207Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "helloWorld" in 1.240666ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"helloWorld\" in 1.240666ms"}}
+[debug] [2022-10-04T11:02:57.883Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:02:58.249Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:02:58.251Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:02:59.256Z] Validating nodejs source
+[debug] [2022-10-04T11:03:00.076Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:00.076Z] Building nodejs source
+[debug] [2022-10-04T11:03:00.076Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:00.077Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:00.172Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:00.198Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:00.201Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:03:00.205Z] [worker-pool] Shutting down IDLE worker (us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-helloWorld)"}}
+[debug] [2022-10-04T11:03:00.205Z] [worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: FINISHING"}}
+[debug] [2022-10-04T11:03:00.208Z] [worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: exited"}}
+[debug] [2022-10-04T11:03:00.208Z] [worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-8a11cbb1-bb78-4b8e-a69e-3fce9f69b6ab]: FINISHED"}}
+[debug] [2022-10-04T11:03:03.976Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:04.077Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:04.482Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:04.482Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:05.485Z] Validating nodejs source
+[debug] [2022-10-04T11:03:06.220Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:06.220Z] Building nodejs source
+[debug] [2022-10-04T11:03:06.220Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:06.221Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:06.221Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:06.288Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:06.308Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:06.310Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:03:06.316Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:06.316Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:07.317Z] Validating nodejs source
+[debug] [2022-10-04T11:03:08.101Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:08.102Z] Building nodejs source
+[debug] [2022-10-04T11:03:08.102Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:08.102Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:08.188Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:08.209Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:08.211Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:03:12.524Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:12.862Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:12.863Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:13.866Z] Validating nodejs source
+[debug] [2022-10-04T11:03:15.106Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:15.106Z] Building nodejs source
+[debug] [2022-10-04T11:03:15.106Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:15.106Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:15.175Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:15.300Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:15.302Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:03:19.010Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:19.111Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:19.541Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:19.541Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:20.543Z] Validating nodejs source
+[debug] [2022-10-04T11:03:21.937Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:21.937Z] Building nodejs source
+[debug] [2022-10-04T11:03:21.937Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:21.938Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:21.938Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:22.144Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:22.144Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:22.150Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:22.223Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:22.230Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:03:23.146Z] Validating nodejs source
+[debug] [2022-10-04T11:03:24.126Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:24.127Z] Building nodejs source
+[debug] [2022-10-04T11:03:24.127Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:24.127Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:24.195Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:24.217Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:24.219Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:03:26.381Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:26.482Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:26.803Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:26.803Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:27.805Z] Validating nodejs source
+[debug] [2022-10-04T11:03:28.548Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:28.549Z] Building nodejs source
+[debug] [2022-10-04T11:03:28.549Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:28.551Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:28.648Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:28.673Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:28.676Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:03:31.390Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:31.491Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:31.816Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:31.816Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:32.818Z] Validating nodejs source
+[debug] [2022-10-04T11:03:33.692Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:33.693Z] Building nodejs source
+[debug] [2022-10-04T11:03:33.693Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:33.693Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:33.697Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-10-04T11:03:33.697Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-04T11:03:33.697Z] Accepted request GET /follo-follo/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2022-10-04T11:03:33.699Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-04T11:03:33.699Z] [functions] Got req.url=/follo-follo/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/follo-follo/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2022-10-04T11:03:33.699Z] [worker-pool] Cleaned up workers for us-central1-helloWorld: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-helloWorld: 1 --> 0"}}
+[debug] [2022-10-04T11:03:33.703Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2022-10-04T11:03:33.703Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2022-10-04T11:03:33.768Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:33.796Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:33.800Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:03:33.804Z] [worker-pool] Shutting down IDLE worker (us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-helloWorld)"}}
+[debug] [2022-10-04T11:03:33.805Z] [worker-us-central1-helloWorld-9d04b1aa-00e3-4205-87d6-2b9b766db682]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-9d04b1aa-00e3-4205-87d6-2b9b766db682]: FINISHING"}}
+[debug] [2022-10-04T11:03:33.806Z] [worker-us-central1-helloWorld-9d04b1aa-00e3-4205-87d6-2b9b766db682]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-9d04b1aa-00e3-4205-87d6-2b9b766db682]: exited"}}
+[debug] [2022-10-04T11:03:33.806Z] [worker-us-central1-helloWorld-9d04b1aa-00e3-4205-87d6-2b9b766db682]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-9d04b1aa-00e3-4205-87d6-2b9b766db682]: FINISHED"}}
+[debug] [2022-10-04T11:03:52.243Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:52.243Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:52.243Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:03:53.245Z] Validating nodejs source
+[debug] [2022-10-04T11:03:54.055Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:03:54.055Z] Building nodejs source
+[debug] [2022-10-04T11:03:54.055Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:03:54.056Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:03:54.168Z] Serving at port 9005
+
+[debug] [2022-10-04T11:03:54.388Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:03:54.391Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] FirebaseError: Failed to load function.
+    at Timeout._onTimeout (/Users/nt/.nodebrew/node/v16.14.0/lib/node_modules/firebase-tools/lib/emulator/functionsRuntimeWorker.js:152:24)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7) {"metadata":{"emulator":{"name":"functions"},"message":{"name":"FirebaseError","children":[],"exit":1,"message":"Failed to load function.","status":500}}}
+[debug] [2022-10-04T11:04:03.767Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-10-04T11:06:20.949Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:21.301Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:21.301Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:22.303Z] Validating nodejs source
+[debug] [2022-10-04T11:06:23.130Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:06:23.130Z] Building nodejs source
+[debug] [2022-10-04T11:06:23.130Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:06:23.130Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:23.130Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:23.130Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:23.130Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:06:23.247Z] Serving at port 9005
+
+[debug] [2022-10-04T11:06:23.286Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:06:23.288Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:06:24.131Z] Validating nodejs source
+[debug] [2022-10-04T11:06:24.860Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:06:24.861Z] Building nodejs source
+[debug] [2022-10-04T11:06:24.861Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:06:24.862Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:06:24.938Z] Serving at port 9005
+
+[debug] [2022-10-04T11:06:24.961Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:06:24.963Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:06:35.128Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:35.229Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:35.587Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:35.587Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:36.589Z] Validating nodejs source
+[debug] [2022-10-04T11:06:38.813Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:06:38.814Z] Building nodejs source
+[debug] [2022-10-04T11:06:38.814Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:06:38.814Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:38.814Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:38.814Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:38.815Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:06:38.931Z] Serving at port 9005
+
+[debug] [2022-10-04T11:06:38.965Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:06:38.969Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:06:39.816Z] Validating nodejs source
+[debug] [2022-10-04T11:06:40.532Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:06:40.533Z] Building nodejs source
+[debug] [2022-10-04T11:06:40.533Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:06:40.533Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:06:40.536Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:40.602Z] Serving at port 9005
+
+[debug] [2022-10-04T11:06:40.624Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:06:40.629Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:06:40.885Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:40.885Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:06:41.887Z] Validating nodejs source
+[debug] [2022-10-04T11:06:42.961Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:06:42.962Z] Building nodejs source
+[debug] [2022-10-04T11:06:42.962Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:06:42.962Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:06:43.032Z] Serving at port 9005
+
+[debug] [2022-10-04T11:06:43.054Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:06:43.057Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:07:03.216Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:03.217Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:03.217Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:03.621Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:03.621Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:04.623Z] Validating nodejs source
+[debug] [2022-10-04T11:07:05.550Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:07:05.550Z] Building nodejs source
+[debug] [2022-10-04T11:07:05.550Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:07:05.551Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:07:05.659Z] Serving at port 9005
+
+[debug] [2022-10-04T11:07:05.701Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:07:05.707Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:07:23.399Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:23.756Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:23.759Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:24.763Z] Validating nodejs source
+[debug] [2022-10-04T11:07:30.976Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:07:30.976Z] Building nodejs source
+[debug] [2022-10-04T11:07:30.976Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:07:30.977Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:30.977Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:07:31.092Z] Serving at port 9005
+
+[debug] [2022-10-04T11:07:31.124Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:07:31.128Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:07:31.301Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:31.301Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:31.698Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:31.799Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:32.103Z] File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:32.103Z] File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:33.106Z] Validating nodejs source
+[debug] [2022-10-04T11:07:34.463Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:07:34.464Z] Building nodejs source
+[debug] [2022-10-04T11:07:34.464Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:07:34.464Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:07:34.543Z] Serving at port 9005
+
+[debug] [2022-10-04T11:07:34.563Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:07:34.565Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:07:37.772Z] File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/nt/React/follo-follo/functions/src/index.ts changed, reloading triggers"}}
+[debug] [2022-10-04T11:07:38.775Z] Validating nodejs source
+[debug] [2022-10-04T11:07:39.872Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "tsc-watch --onFirstSuccess 'firebase emulators:start --only functions'",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^0.2.0",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4"
+  },
+  "private": true
+}
+[debug] [2022-10-04T11:07:39.873Z] Building nodejs source
+[debug] [2022-10-04T11:07:39.873Z] Analyzing nodejs backend spec
+[debug] [2022-10-04T11:07:39.873Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-04T11:07:39.945Z] Serving at port 9005
+
+[debug] [2022-10-04T11:07:39.966Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-04T11:07:39.968Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-10-04T11:07:42.004Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-10-04T11:07:42.004Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-04T11:07:42.005Z] Accepted request GET /follo-follo/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2022-10-04T11:07:42.014Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-04T11:07:42.016Z] [functions] Got req.url=/follo-follo/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/follo-follo/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2022-10-04T11:07:42.016Z] [worker-pool] Cleaned up workers for us-central1-helloWorld: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-helloWorld: 1 --> 0"}}
+[debug] [2022-10-04T11:07:42.029Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2022-10-04T11:07:42.030Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2022-10-04T11:07:42.682Z] [runtime-status] [23069] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-10-04T11:07:42.682Z] [runtime-status] [23069] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-10-04T11:07:42.682Z] [runtime-status] [23069] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-10-04T11:07:42.683Z] [runtime-status] [23069] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-10-04T11:07:42.700Z] [runtime-status] [23069] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-10-04T11:07:42.700Z] [runtime-status] [23069] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-10-04T11:07:42.700Z] [runtime-status] [23069] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-10-04T11:07:42.700Z] [runtime-status] [23069] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-10-04T11:07:42.700Z] [runtime-status] [23069] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-10-04T11:07:42.701Z] [runtime-status] [23069] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/nt/React/follo-follo/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-10-04T11:07:42.704Z] [runtime-status] [23069] Functions runtime initialized. {"cwd":"/Users/nt/React/follo-follo/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Functions runtime initialized. {\"cwd\":\"/Users/nt/React/follo-follo/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-10-04T11:07:42.704Z] [runtime-status] [23069] Listening to port: /var/folders/bj/1rdcn0y945d70f3tsylfcmm40000gn/T/fire_emu_c96a7f61ab616282.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [23069] Listening to port: /var/folders/bj/1rdcn0y945d70f3tsylfcmm40000gn/T/fire_emu_c96a7f61ab616282.sock"}}
+[debug] [2022-10-04T11:07:42.744Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[debug] [2022-10-04T11:07:42.744Z] [worker-us-central1-helloWorld-ecef6877-2752-4c77-8c18-5383f844b6df]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-ecef6877-2752-4c77-8c18-5383f844b6df]: BUSY"}}
+[info] i  functions: Beginning execution of "helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"helloWorld\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2022-10-04T11:07:42.748Z] [worker-us-central1-helloWorld-ecef6877-2752-4c77-8c18-5383f844b6df]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-ecef6877-2752-4c77-8c18-5383f844b6df]: IDLE"}}
+[debug] [2022-10-04T11:07:42.748Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "helloWorld" in 1.42675ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"helloWorld\" in 1.42675ms"}}
